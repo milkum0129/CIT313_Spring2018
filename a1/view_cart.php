@@ -40,7 +40,7 @@
 
 		$thisProduct = $aryProductArray[$aryCartItemArray[0]]; //added semicolon
 		
-		echo "<b>" . $thisProduct->product_name . "</b>" . " Qty: " . $aryCartItemArray[1] . "<br />";
+		echo "<b>" . $thisProduct->product_name . "</b>" . " Qty: " . $aryCartItemArray[1] . "<br />"; 
 		
 	}
 
