@@ -38,7 +38,7 @@
 		
 		//find the corresponding product in the product array
 
-		$thisProduct = $aryProductArray[$aryCartItemArray[0]]; //added semicolon
+		$thisProduct = $aryProductArray[$aryCartItemArray[0]]; //added semicolon 
 		
 		echo "<b>" . $thisProduct->product_name . "</b>" . " Qty: " . $aryCartItemArray[1] . "<br />"; 
 		
