@@ -16,9 +16,13 @@ class Post extends Model{
 		
 	public function getAllPosts($limit = 0){
 		
-		if($limit > 0){
+		$numposts="";
+		
+		if($limit > 0)
+		{
 			
 			$numposts = ' LIMIT '.$limit;
+			
 		}
 		
 		$sql =  'SELECT pID, title, uID, categoryID, date, content FROM posts'.$numposts;
@@ -28,10 +32,10 @@ class Post extends Model{
 		
 		while ($row=$results->fetchrow()) {
 			$posts[] = $row;
-		}
+		
 
 		return $posts;
-	
+		}
 	}
 	
 	public function addPost($data){
@@ -45,3 +49,4 @@ class Post extends Model{
 	
 	
 }
+?>

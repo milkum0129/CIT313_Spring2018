@@ -1,6 +1,8 @@
 
 <?php include('elements/header.php');?>
 <?php 
+
+
 if( is_array($post) ) {
 	extract($post);?>
 

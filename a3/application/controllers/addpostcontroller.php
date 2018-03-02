@@ -42,3 +42,4 @@ class AddPostController extends Controller{
 	
 	
 }
+?>

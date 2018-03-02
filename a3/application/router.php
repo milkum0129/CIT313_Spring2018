@@ -49,4 +49,4 @@ if (class_exists($controller)) {
 } else {
 		new Controller('404');
 }
-
+?>
