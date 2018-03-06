@@ -18,8 +18,9 @@
      			<label>Content</label>
           <textarea id="tinyeditor" name="post_content" style="width:556px;height: 200px"><?php echo $content?></textarea>
     			<br/>
-		  <input type="text" class="categoryID" name="categoryID" value=<"?php echo $categoryID?">
-          <input type="hidden" name="pID" value="<?php echo $pID?>"/>
+		  <input type="text" name="categoryID" value="<?php echo $categoryID?>"><br/>
+		  <input type="date" name="post_date" value="<?php echo $date?>">
+		  <input type="hidden" name="pID" value="<?php echo $pID?>"/><br/>
           <button id="submit" type="submit" class="btn btn-primary" >Submit</button>
         </form>
 

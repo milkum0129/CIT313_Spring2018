@@ -1,8 +1,6 @@
 
 <?php include('elements/header.php');?>
 <?php 
-
-
 if( is_array($post) ) {
 	extract($post);?>
 
@@ -12,8 +10,8 @@ if( is_array($post) ) {
 <h1><?php echo $title;?></h1>
   </div>
 
-<?php echo $content;?>
-
+<?php echo $content;?></br></br>
+<?php echo "Posted on " .date("r", strtotime($post['date']));?>
 
 </div>
 <?php }?>
@@ -29,7 +27,7 @@ if( is_array($post) ) {
 	<?php foreach($posts as $p){?>
     <h3><a href="<?php echo BASE_URL?>blog/view/<?php echo $p['pID'];?>" title="<?php echo $p['title'];?>"><?php echo $p['title'];?></a></h3>
 	<p><?php echo $p['content'];?></p>
-	<p><?php echo "Posted on " .date("Y-m-d h:i:sa", strtotime($p['date']));?></p>
+	<p><?php echo "Posted on " .date("r", strtotime($p['date']));?></p>
 <?php }?>
 </div>
 
