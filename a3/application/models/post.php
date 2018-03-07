@@ -44,10 +44,10 @@ class Post extends Model{
 	}
 	public function updatePost($data)
 	{
-		$sql='UPDATE post SET title=?, content=?, categoryID=?, date=? where pID=?';
+		$sql='UPDATE posts SET title=?, content=?, date=?, categoryID=? where pID=?';
 		$this->db->execute($sql,$data);
-		$updatemessage = 'Post updated.';
-		return $updatemessage;
+		$message = 'Post updated.';
+		return $message;
 	}
 	
 }

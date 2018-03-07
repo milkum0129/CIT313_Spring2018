@@ -21,7 +21,7 @@ class AddPostController extends Controller{
 		
 			$this->postObject = new Post();
 			
-			$data = array('title'=>$_POST['post_title'],'content'=>$_POST['post_content'],'date'=>$POST['post_date'],'categoryID'=>$POST['post_categoryID']);
+			$data = array('title'=>$_POST['post_title'],'content'=>$_POST['post_content'],'date'=>$_POST['post_date'],'categoryID'=>$_POST['post_categoryID']);
 			
 	
 			$result = $this->postObject->addPost($data);
@@ -44,9 +44,19 @@ class AddPostController extends Controller{
 			$this->set('categoryID', $post['categoryID']);
 			$this->set('task', 'update');
 			
+			
 		
 	}
 	
+	public function update()
+	{
+		
+			$this->postObject = new Post();		
+			$data = array('title'=>$_POST['post_title'],'content'=>$_POST['post_content'],'date'=>$_POST['post_date'],'categoryID'=>$_POST['post_categoryID'],'pID'=>$_POST['pID']);
 	
+			$result = $this->postObject->updatePost($data);
+			
+			$this->set('message', $result);
+	}
 }
 ?>

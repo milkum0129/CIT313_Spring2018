@@ -36,7 +36,7 @@ class User extends Model{
 	
 		public function add_user($data){
 		
-		$sql='INSERT INTO users (email,password,first_name,last_name) VALUES (?,?,?,?)'; 
+		$sql='INSERT INTO users (email,first_name,last_name,password) VALUES (?,?,?,?)'; 
 		$this->db->execute($sql,$data);
 		$message = 'User added.';
 		return $message;

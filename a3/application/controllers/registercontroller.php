@@ -18,12 +18,13 @@ public $userObject;
 		
 			$this->userObject = new User();
 			
-			$data = array('email'=>$_POST['user_email'],'password'=>$_POST['user_password'],'first_name'=>$POST['user_first_name'],'last_name'=>$POST['user_last_name']);
+			$data = array('email'=>$_POST['user_email'],'first_name'=>$_POST['user_first_name'],'last_name'=>$_POST['user_last_name'],'password'=>$_POST['user_password']);
 			
 	
 			$result = $this->userObject->add_user($data);
 			
 			$this->set('message', $result);
 	}
+
 }
 ?>
