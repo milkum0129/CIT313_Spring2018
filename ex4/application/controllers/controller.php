@@ -1,23 +1,23 @@
 <?php
 
 class Controller {
+	
    	public $load;
-	public $data = array();
+		public $data = array();
+
 
 	function __construct($view, $method = null, $parameters = null){
-		//instantiate the load class
-		$this->load = new Load();
-		new Model();
-			
-		//run any task methods
-		if($method){
-			$this->runTask($method, $parameters);
-		}else{
-			$this->defaultTask();
-		}
-			
-		//render the view
-		$this->load->view($view.'.php', $this->data);
+		 		//instantiate the load class
+				$this->load = new Load();
+				new Model();
+				//run any task methods
+				if($method){
+					$this->runTask($method, $parameters);
+				}else{
+					$this->defaultTask();
+				}
+				//render the view
+				$this->load->view($view.'.php', $this->data);
 	}
 	
 	/*
@@ -58,3 +58,4 @@ class Controller {
 
 
 }
+?>

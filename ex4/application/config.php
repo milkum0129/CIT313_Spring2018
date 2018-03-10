@@ -7,6 +7,4 @@ define('DB_HOST', 'localhost');
 define('DB_USER', 'mnastal');
 define('DB_PASS', 'Milkyway12');
 define('DB_NAME', 'mnastal_db');
-
-define('REQFIELD', '<font color="#FF0000">*</font>');
 ?>
