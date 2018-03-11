@@ -26,11 +26,11 @@ if( is_array($user) )
 
 <h1><?php echo $email;?></h1>
 </div>
-<?php foreach($users as $u){?>
+<?php foreach($users as $usr){?>
 	
-    <h3><a href="<?php echo BASE_URL?>members/view/<?php echo $u['uID'];?>" title="<?php echo $u['email'];?>"><?php echo $u['email'];?></a></h3>
-	<p><?php echo $u['first_name'] ." ".$u['last_name'];?></p>
-	<p><?php echo $u['email'];?></p>
+    <h3><a href="<?php echo BASE_URL?>members/view/<?php echo $usr['uID'];?>" title="<?php echo $usr['email'];?>"><?php echo $usr['email'];?></a></h3>
+	<p><?php echo $usr['first_name'] ." ".$usr['last_name'];?></p>
+	<p><?php echo $usr['email'];?></p>
 <?php }?>
 </div>
 <?php }?>

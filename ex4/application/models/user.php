@@ -93,14 +93,14 @@ class User extends Model{
 	}
 		public function checkUser($email, $password)
 		{
-			$sql = "SELECT email, password FROM users where email =?";
-			$results = $this->db-getrow($sql, array($email));
+			$sql = 'SELECT email, password FROM users WHERE email =?';
+			$results = $this->db->getrow($sql, array($email));
 			$user = $results;
 			return $user;
 		}
 		public function getUserFromEmail($email)
 		{
-			$sql = "SELECT * FROM users WHERE email = ?";
+			$sql = 'SELECT * FROM users WHERE email = ?';
 			$results = $this->db->getrow($sql, array($email));
 			
 			$user = $results;
