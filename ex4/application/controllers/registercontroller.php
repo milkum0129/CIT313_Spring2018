@@ -18,7 +18,7 @@ class RegisterController extends Controller
 		
 			$this->userObject = new User();
 			
-			$password=$_POST['user_password'];
+			$password=$_POST['password'];
 			
 			$passhash=password_hash($password,PASSWORD_DEFAULT);
 			

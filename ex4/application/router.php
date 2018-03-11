@@ -19,8 +19,9 @@ function autoloader($class){
 	
 }
 require_once('application/config.php');
-require_once('libraries/password.php');
 spl_autoload_register('autoloader');
+require_once('libraries/password.php');
+
 
 
 //grab the path info and break it apart into separate variables

@@ -1,5 +1,4 @@
 <?php 
-require_once('application/config.php');
 include('elements/header.php');?>
 
 <div class="container">
