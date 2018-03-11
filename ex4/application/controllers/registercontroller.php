@@ -2,7 +2,7 @@
 class RegisterController extends Controller
 {
 	
-public $userObject;
+	protected $userObject;
 	
 	public function defaultTask()
 	{
@@ -18,7 +18,8 @@ public $userObject;
 		
 			$this->userObject = new User();
 			
-			$password=$_POST['password'];
+			$password=$_POST['user_password'];
+			
 			$passhash=password_hash($password,PASSWORD_DEFAULT);
 			
 			$data = array('email'=>$_POST['user_email'],'first_name'=>$_POST['user_first_name'],'last_name'=>$_POST['user_last_name'],'password'=>$passhash);
