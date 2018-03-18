@@ -1,5 +1,6 @@
 <?php 
 include('elements/header.php');?>
+
 <div class="container">
 	<div class="page-header">
    <h1>Login View </h1>
@@ -9,6 +10,7 @@ include('elements/header.php');?>
 		</div>
    <?php }
   ?>
+  
 
 <form action="<?php echo BASE_URL?>login/do_login" id= "login_form" class="login_form" method="post">
 <div class="container">

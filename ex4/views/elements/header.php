@@ -53,9 +53,9 @@
               <li class="active"><a href="<?php echo BASE_URL?>">Home</a></li>
               <li><a href="<?php echo BASE_URL?>blog/">Blog</a></li>
 			  <li><a href="<?php echo BASE_URL?>members/">Members</a></li>
-			  </ul>
+            </ul>
 			<?php
-			if($u->isRegisterd())
+			if($u->isRegistered())
 			{
 			?>
 			<ul class="nav pull-right">
@@ -91,7 +91,6 @@
 			<?php
 			}
 			?>
-		
           </div><!--/.nav-collapse -->
         </div>
       </div>
