@@ -10,7 +10,7 @@ class MembersController extends Controller{
 	  	$this->set('user',$user);
    	}
 	
-	public function defaultTask(){
+	public function index(){
 		$this->userObject = new Users();
 		$users = $this->userObject->getAllUsers();
 		$this->set('title', 'The Members View');

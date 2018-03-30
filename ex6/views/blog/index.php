@@ -14,7 +14,6 @@
         <?php }?>
     </div>
 
-<?php }?>
 
 
 <?php include('views/elements/footer.php');?>
