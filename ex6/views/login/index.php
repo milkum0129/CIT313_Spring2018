@@ -1,6 +1,6 @@
 <?php
-require_once ('application/config.php');
-include('elements/header.php')
+
+include('views/elements/header.php')
 
 ;?>
 <div class="container">
@@ -16,9 +16,9 @@ include('elements/header.php')
    }
         ?>
    
-   <?php include('elements/login_form.php');?>
+   <?php include('views/elements/login_form.php');?>
    
   </div>
 </div>
-<?php include('elements/footer.php');?>
+<?php include('views/elements/footer.php');?>
 

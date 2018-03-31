@@ -1,6 +1,5 @@
 <?php
-require_once ('application/config.php');
-include('elements/header.php');
+include('views/elements/header.php');
 ?>
 
 <div class="container">
@@ -14,12 +13,12 @@ include('elements/header.php');
     </div>
   <?php }?>
 
-<?php include ('elements/registration_form.php');
+<?php include ('views/elements/registration_form.php');
 echo '<p><a href="'.BASE_URL.'">Back to home page</a></p>';
 ?>
 
 </div>
 </div>
 
-<?php include('elements/footer.php');
+<?php include('views/elements/footer.php');
 ?>

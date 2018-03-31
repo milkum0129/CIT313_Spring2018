@@ -1,17 +1,22 @@
 <?php
 
-class AddPostController extends Controller{
+class ManagePostsController extends Controller{
 	
 	public $postObject;
 	protected $access =1;
 	
-	public function defaultTask(){
-		$this->postObject = new Post();
-		$this->getCategories();
-		$this->set('task', 'add');
+	public function index()
+	{
+		
 	}
 	
 	public function add(){
+		$this->postObject = new Post();
+		$this->getCategories();
+		$this->set('task', 'save');
+	}
+	
+	public function save(){
 		$this->postObject = new Post();
 		$data = array('title'=>$_POST['title'],'content'=>$_POST['content'],'category'=>$_POST['category'],'date'=>$_POST['date']);
 		//$this->getCategories();
@@ -53,3 +58,4 @@ class AddPostController extends Controller{
 	}
 	
 }
+?>

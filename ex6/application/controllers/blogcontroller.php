@@ -4,7 +4,7 @@ class BlogController extends Controller{
 	
 	public $postObject;
   
-   	public function view($pID){
+   	public function post($pID){
 		$this->postObject = new Post();
 		$post = $this->postObject->getPost($pID);	    
 	  	$this->set('post',$post);
@@ -16,7 +16,7 @@ class BlogController extends Controller{
 		$this->set('title', 'The Default Blog View');
 		$this->set('posts',$posts);
 	}
-	.
+	
 }
 
 ?>

@@ -2,7 +2,12 @@
 class CategoriesController extends Controller{
 	
 	protected $categoryObject;
-
+	
+	public function index()
+	{
+		
+	}
+	
 	public function getCategories(){
 		$this->categoryObject = new Categories;
 		$outcome = $this->categoryObject->getCategories();

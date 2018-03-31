@@ -3,10 +3,15 @@
 class RegisterController extends Controller{
 	
 	protected $userObject;
+	
+	public function index()
+	{
+		
+	}
 
 	public function defaultTask(){
 		$userObject = new Users();
-		$this->set('task','add');
+		$this->set('task','save');
 	}
 	
 	public function add(){
