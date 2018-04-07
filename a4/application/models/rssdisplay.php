@@ -12,7 +12,7 @@ class RssDisplay extends Model {
 		
 		$this->feed_url=$url;
 		
-		$rssdisplay = new RssDisplay($url);
+		//$rssdisplay = new RssDisplay($url);
 
         
     }
@@ -24,9 +24,10 @@ class RssDisplay extends Model {
 		
 		for($i=0; $i<$num_feed_items; $i++)
 		{
-			$itemsarray[$i] = $xml->items[$i];
+			$itemsarray[$i] = $xml->channel->item[$i];
 		
 		}
+		
 		$this->num_feed_items=$num_feed_items;
 		return $itemsarray;
 	}

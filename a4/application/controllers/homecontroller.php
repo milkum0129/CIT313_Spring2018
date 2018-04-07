@@ -10,8 +10,9 @@ class HomeController extends Controller
 		
 		$feed_data=$rss->getFeedItems(8);
 		
-		$channel=getChannelInfo();
+		$channel=$rss->getChannelInfo();
 		
+		$this->set('feed_data',$feed_data);
 		$this->set('rss_title',$channel->title);
 		
 	}

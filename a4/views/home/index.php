@@ -3,14 +3,14 @@
 include('views/elements/header.php');?>
 <div class="container">
 	<div class="page-header">
-    <h1>Latest News from<?php echo $rss_title;?></h1>
+    <h1>Latest News from <?php echo $rss_title;?></h1>
 	</div>
 	<?php
 		foreach($feed_data as $item) {?>
-		<h3><?php $item->title?></h3>
-		<p><?php $item->description?></p>
-		<p><?php $item->pubDate?></p>
-		<a href="<?php $item->url?>">Read More</a>
+		<h3><?php echo $item->title?></h3>
+		<p><?php echo $item->description?></p>
+		<p><?php echo $item->pubDate?></p>
+		<a href="<?php echo $item->guid?>">Read More</a>
 		<?php }?>
 		
 </div>
