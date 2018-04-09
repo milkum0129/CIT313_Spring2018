@@ -26,7 +26,7 @@ include('views/elements/header.php');?>
 	<h4><?php echo $weather->current_observation->weather;?>&nbsp;<img src="<?php echo $weather->current_observation->icon_url;?>"/>
 	<h4>Temperature: <?php echo $weather->current_observation->temperature_string;?></h4>
 	<h4>Wind: <?php echo $weather->current_observation->wind_string;?></h4>
-	<h4>Humidity: <?php echo $weather->current_observation->pressure_in;?>(<?php $weather->current_observation->pressure_trend;?>)</h4>
+	<h4>Humidity: <?php echo $weather->current_observation->pressure_in;?>(<?php echo $weather->current_observation->pressure_trend;?>)</h4>
 	
 </div>
 <?php
