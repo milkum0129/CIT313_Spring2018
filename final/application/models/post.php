@@ -10,6 +10,18 @@ class Post extends Model{
         $results = $this->db->getrow($sql, array($pID));
 
         $post = $results;
+		
+		$sql= 'SELECT co.uID, co.commentID, commentText, co.date as commentdate, u.first_name as commentfname, u.last_name as commentlname from comments co 
+		INNER JOIN users u on u.uid=co.uid
+		where postID= '.$pID;
+		
+		$results2 = $this->db->execute($sql);
+		
+		 while ($row=$results2->fetchrow()) {
+            $comments[] = $row;
+        }
+		
+		$post['comments']=$comments;
 
         return $post;
 
