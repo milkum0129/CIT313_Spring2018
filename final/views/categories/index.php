@@ -4,16 +4,16 @@
 	<div class="page-header">
 		<h1>Categories</h1>
   	</div>
-    
   		<?php if($message){?>
     <div class="alert alert-success">
     <button type="button" class="close" data-dismiss="alert">×</button>
     	<?php echo $message?>
     </div>
   <?php }
-		foreach($categories as $key=>$value){
-			echo "<h3>".$value."</h3>";
-			//echo "<a class='btn btn-warning' href='".BASE_URL."categories/edit/".$key."'>Edit Category</a><hr>";
+		foreach($categories as $key=>$value){?>
+			<h3><?php echo $value;?></h3>
+			<a href="<?php echo BASE_URL;?>categories/edit/<?php echo $key;?>" class="btn btn-primary">Edit Category</a>
+		<?php
 		}
 	 ?>
 

@@ -7,7 +7,10 @@ class ManagePostsController extends Controller{
 	
 	public function index()
 	{
-		
+		$this->postObject = new Post();
+		$posts = $this->postObject->getAllPosts();
+		$this->set('title', 'The Default Blog View');
+		$this->set('posts',$posts);
 	}
 	
 	public function add(){
@@ -26,6 +29,8 @@ class ManagePostsController extends Controller{
 	}
 	
 	public function edit($pID){
+		
+
 		$this->postObject = new Post();
 		$post = $this->postObject->getPost($pID);
 		$this->getCategories();
@@ -56,6 +61,13 @@ class ManagePostsController extends Controller{
 		$this->getCategories();
 		$this->set('task', 'update');
 	}
-	
+	public function delete($pID) {
+		$this->postObject = new Post();
+		$post = $this->postObject->getPost($pID);
+		$result = $this->postObject->deletePost($pID);
+		header("Location: " . BASE_URL . "manageposts/");
+		$this->set('message', $result);
+
+	}
 }
 ?>

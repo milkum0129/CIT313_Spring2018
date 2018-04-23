@@ -77,6 +77,9 @@
                                     <li>
                                         <a href="<?php echo BASE_URL?>manageposts/">Add Blog Post</a>
                                     </li>
+									<li>
+                                        <a href="<?php echo BASE_URL?>categories/">Manage Categories</a>
+                                    </li>
                                 <?php
                                 }
                                 ?>
