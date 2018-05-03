@@ -4,7 +4,7 @@ include('views/elements/header.php');
 
 <div class="container">
 	<div class="page-header">
-   <h1>Register</h1>
+   <h1>Edit Profile</h1>
    
    <?php if($message){?>
     <div class="alert alert-success">
@@ -19,7 +19,6 @@ echo '<p><a href="'.BASE_URL.'">Back to home page</a></p>';
 
 </div>
 </div>
-
 
 <?php include('views/elements/footer.php');
 ?>

@@ -41,6 +41,7 @@
   </head>
 
   <body>
+	
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -75,17 +76,25 @@
                                 if($u->isAdmin()) {
                                     ?>
                                     <li>
-                                        <a href="<?php echo BASE_URL?>manageposts/">Add Blog Post</a>
+                                        <a href="<?php echo BASE_URL?>manageposts/add/">Add Blog Post</a>
                                     </li>
 									<li>
                                         <a href="<?php echo BASE_URL?>categories/">Manage Categories</a>
                                     </li>
+									<li>
+                                        <a href="<?php echo BASE_URL?>manageusers/">Manage Users</a>
+                                    </li>
+									
                                 <?php
                                 }
                                 ?>
+								<li>
+									<a href="<?php echo BASE_URL?>members/profile/<?php echo $uID;?>">Manage Profile</a>
+                                </li>
                                 <li>
                                     <a href="<?php echo BASE_URL?>login/logout/">Log Out</a>
                                 </li>
+								
                             </ul>
 
                       </li>

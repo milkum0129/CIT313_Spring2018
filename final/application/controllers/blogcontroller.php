@@ -34,5 +34,12 @@ class BlogController extends Controller{
 		$this->set('deleteComment', $deleteComment);
 		header("Location: " . BASE_URL . "blog/post/" . $_POST['postID']);
 	}
+	public function category($categoryID){
+		$this->postObject = new Post();
+		$posts = $this->postObject->getCatPosts($categoryID);
+		$this->set('title', 'The Blog Category View');
+		$this->set('posts',$posts);
+		
+	}
 }
 ?>

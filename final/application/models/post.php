@@ -30,8 +30,11 @@ class Post extends Model{
 
     public function getCatPosts($cID){
 
-        $sql = 'select * from posts where categoryID = ?';
-
+        $sql = 'select * from posts p
+			INNER JOIN categories c on c.categoryid = p.categoryid
+			INNER JOIN users u on u.uid = p.uid
+			WHERE c.categoryID = ?';
+			
         $results = $this->db->execute($sql, $cID);
 
         while ($row=$results->fetchrow()) {
@@ -79,6 +82,7 @@ class Post extends Model{
         $message = "Post updated.";
         return $message;
 	}
+	
 	public function deletePost($pID) {
 
 		$sql = 'DELETE from posts WHERE pID = ?';

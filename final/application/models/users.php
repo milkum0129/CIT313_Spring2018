@@ -5,6 +5,7 @@ class Users extends Model{
     public $first_name;
     public $last_name;
     public $email;
+	public $active;
     protected $user_type;
 
 
@@ -53,7 +54,7 @@ class Users extends Model{
     }
 	
 	public function getUser($uID){
-		$sql = 'SELECT uID, first_name, last_name, email, password FROM users WHERE uID = ?';
+		$sql = 'SELECT uID, first_name, last_name, email, password, active FROM users WHERE uID = ?';
 		
 		// perform query
 		$results = $this->db->getrow($sql, array($uID));
@@ -65,7 +66,7 @@ class Users extends Model{
 		if($limit > 0){
 			$numusers = ' LIMIT '.$limit;
 		}
-		$sql = 'SELECT uID, first_name, last_name, email, password FROM users'.$numusers;
+		$sql = 'SELECT uID, first_name, last_name, email, password, active FROM users'.$numusers;
 		
 		// perform query
 		$results = $this->db->execute($sql);
@@ -127,6 +128,40 @@ class Users extends Model{
         return $user;
 
     }
-
+	public function isActive($uID){
+		$sql='SELECT * FROM users WHERE uID = ?';
+		
+		$results=$this->db->getrow($sql,array($uID));
+		
+		$user=$results;
+		
+		
+		if($user['active']=='1'){
+				return true;
+		}else{
+			return false;
+		}
+		return $user;
+	}
 	
+	public function approveUser($uID) {
+
+        $sql = 'UPDATE users SET active = 1 where uID = ?';
+        $this->db->execute($sql, $uID);
+        $message = "User approved.";
+        return $message;
+	}
+	public function deleteUser($uID) {
+
+		$sql = 'DELETE from users WHERE uID = ?';
+		$this->db->execute($sql, $uID);
+		$message = "User deleted.";
+		return $message;
+	}
+	public function editUser($data){
+		$sql = 'UPDATE users set first_name=?, last_name=?, email=?, password=? WHERE uID=?'; 
+		$this->db->execute($sql,$data);
+		$message = 'User updated.';
+		return $message;
+	}
 }

@@ -1,8 +1,10 @@
+
 <?php
 
 include('views/elements/header.php');?>
 <div class="container">
 	<div class="page-header">
+	
     <h1>Latest News from 
 	<?php echo $rss_title;?></h1>
 	</div>
@@ -21,7 +23,15 @@ include('views/elements/header.php');?>
 	Duis laoreet pharetra eros, tempus auctor neque. Vestibulum egestas enim ex, ac volutpat nulla eleifend eu. Morbi a magna at metus rhoncus pharetra non nec massa. Sed accumsan condimentum ligula 
 	quis porttitor. Suspendisse potenti.
 </p>	
-		
+	<div class="sidebar">
+	<?php
+		foreach($feed_data as $item) {?> 
+		<h3><?php echo $item->title?></h3>
+		<p><?php echo $item->description?></p>
+		<p><?php echo $item->pubDate?></p>
+		<a href="<?php echo $item->guid?>">Read More</a>
+		<?php }?>
+	</div>
 </div>
 
 

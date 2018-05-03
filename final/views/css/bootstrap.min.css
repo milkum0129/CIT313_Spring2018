@@ -862,3 +862,22 @@ i[class^="icon-"]{opacity:0.8;}
 .show{display:block;}
 .invisible{visibility:hidden;}
 .affix{position:fixed;}
+<style>
+.sidebar{
+	
+    float: left;
+	height: 100%; 
+    width: 300px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 20; 
+    left: 0;
+    background-color: #000; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+	font-size: 15px;
+}
+.container {
+	float: right;
+}
+</style>
