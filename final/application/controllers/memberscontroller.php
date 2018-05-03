@@ -29,7 +29,7 @@ class MembersController extends Controller{
 		$this->set('email',$user['email']);
 		$this->set('password',$user['password']);
    	}
-	public function editUserProfile(){
+	public function editUserProfile($uID){
 		$this->userObject = new Users();
 		if($_POST['password']!=""){
 		$password = $_POST['password'];
@@ -37,8 +37,10 @@ class MembersController extends Controller{
 			$password=$_POST['currentpassword'];
 		}
 		$passhash = password_hash($password,PASSWORD_DEFAULT);
-		$data = array('first_name'=>$_POST['first_name'],'last_name'=>$_POST['last_name'],'email'=>$_POST['email'],'password'=>$passhash,'uID'=>$_POST['uID']);
+		$data = array('first_name'=>$_POST['first_name'],'last_name'=>$_POST['last_name'],'email'=>$_POST['email'],'password'=>$passhash,'uID'=>$_SESSION['uID']);
 		$this->userObject->editUser($data);
+		header("Location: " . BASE_URL . "members/profile/".$uID);
+		
 	}
 	
 }

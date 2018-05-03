@@ -1,4 +1,4 @@
-<form id="registration_form" action="<?php echo BASE_URL;?>register/<?php echo $task?>" method="post">
+<form id="registration_form" action="<?php echo BASE_URL; if($password==""){?>register/<?php echo $task;} else{?>members/editUserProfile/<?php echo $_SESSION['uID'];;} ?>" method="post">
 
 <fieldset>
 <legend></legend>
@@ -24,7 +24,7 @@
 
 <br />
 
-<input type="hidden" name="uID" value="<?php echo $uID ?>"/>
+<input type="hidden" name="uID" value="<?php echo $_SESSION['uID']; ?>"/>
 <input type="hidden" name="active"  value="0"/>
 <input type="hidden" name="currentpassword"  value="<?php echo $password?>"/>
  

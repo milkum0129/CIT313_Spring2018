@@ -82,14 +82,18 @@
                                         <a href="<?php echo BASE_URL?>categories/">Manage Categories</a>
                                     </li>
 									<li>
+                                        <a href="<?php echo BASE_URL?>manageposts/">Manage Posts</a>
+                                    </li>
+									<li>
                                         <a href="<?php echo BASE_URL?>manageusers/">Manage Users</a>
                                     </li>
 									
                                 <?php
                                 }
+                                
                                 ?>
 								<li>
-									<a href="<?php echo BASE_URL?>members/profile/<?php echo $uID;?>">Manage Profile</a>
+									<a href="<?php echo BASE_URL?>members/profile/<?php echo $_SESSION['uID'];?>">Manage Profile</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo BASE_URL?>login/logout/">Log Out</a>
